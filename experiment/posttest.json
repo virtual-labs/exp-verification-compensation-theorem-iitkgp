@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "If I=33<-13º A find the Thevenin’s equivalent circuit to the left of terminal x-y in the network of the figure.<br/><p style=\"text-align:center\"><img src=\"images/quiz1.jpg\" style=\"width:450px;height:330px;\"></p>",
+      "question": "If I=33<-13º A find the Thevenin’s equivalent circuit to the left of terminal x-y in the network of the figure.<br/><p style=\"text-align:center\"><img src=\"images/quiz1.JPG\" style=\"width:450px;height:330px;\"></p>",
       "answers": {
         "a": "4.545<58º Ω, 150<45º V",
         "b": "4.545<48º Ω, 15<45º V",
@@ -19,7 +19,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Find the current 10 Ω resistor using Thevnin’s Theorem .<br/><p style=\"text-align:center\"><img src=\"images/quiz2.jpg\" style=\"width:450px;height:330px;\"></p>",
+      "question": "Find the current 10 Ω resistor using Thevnin’s Theorem .<br/><p style=\"text-align:center\"><img src=\"images/quiz2.JPG\" style=\"width:450px;height:330px;\"></p>",
       "answers": {
         "a": " 9.35<28.3º A",
         "b": "9.35<58.3º A",
@@ -36,7 +36,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Find Thevenin’s equivalent circuit of the network.<br/><p style=\"text-align:center\"><img src=\"images/quiz3.jpg\" style=\"width:450px;height:330px;\"></p>",
+      "question": "Find Thevenin’s equivalent circuit of the network.<br/><p style=\"text-align:center\"><img src=\"images/quiz3.JPG\" style=\"width:450px;height:330px;\"></p>",
       "answers": {
         "a": " Vo.c.=(6.5 - sin wt ) V and Rin(Rth)= 20Ω",
         "b": "Vo.c.=(6.5 - sin wt ) V and Rin(Rth)= 10Ω",
@@ -53,7 +53,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Determine the current through the 5Ω resistor in the circuit.<br/><p style=\"text-align:center\"><img src=\"images/quiz4.jpg\" style=\"width:450px;height:330px;\"></p>",
+      "question": "Determine the current through the 5Ω resistor in the circuit.<br/><p style=\"text-align:center\"><img src=\"images/quiz4.JPG\" style=\"width:450px;height:330px;\"></p>",
       "answers": {
         "a": " 3A",
         "b": "1A",
@@ -70,7 +70,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "What is the current in the 10Ω resistor ?<br/><p style=\"text-align:center\"><img src=\"images/quiz5.jpg\" style=\"width:450px;height:330px;\"></p>",
+      "question": "What is the current in the 10Ω resistor ?<br/><p style=\"text-align:center\"><img src=\"images/quiz5.JPG\" style=\"width:450px;height:330px;\"></p>",
       "answers": {
         "a": "0.415A",
         "b": "0.315A",
