@@ -2,12 +2,12 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "If I=33<-13º A find the Thevenin’s equivalent circuit to the left of terminal x-y in the network of the figure.<br/><p style=\"text-align:center\"><img src=\"images/quiz1.JPG\" style=\"width:450px;height:330px;\"></p>",
+      "question": "For the following circuit Find the current flow throughout the AB branch once the resistance is 4Ω.<br/><p style=\"text-align:center\"><img src=\"images/quiz1.png\" style=\"width:450px;height:330px;\"></p>",
       "answers": {
-        "a": "4.545<58º Ω, 150<45º V",
-        "b": "4.545<48º Ω, 15<45º V",
-        "c": "4.75<58º Ω, 75<45º V",
-        "d": "answer49.545<58º Ω, 150<45º V"
+        "a": "1.06 A",
+        "b": "2.8 A",
+        "c": "4 A",
+        "d": "None of these"
       },
       "explanations": {
         "a": "You have chosen correct answer",
@@ -19,12 +19,12 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Find the current 10 Ω resistor using Thevnin’s Theorem .<br/><p style=\"text-align:center\"><img src=\"images/quiz2.JPG\" style=\"width:450px;height:330px;\"></p>",
+      "question": "The resistance value in the two terminals of the following circuit A & B is modified to 5ohms then what is the compensation voltage?<br/><p style=\"text-align:center\"><img src=\"images/quiz2.png\" style=\"width:450px;height:330px;\"></p>",
       "answers": {
-        "a": " 9.35<28.3º A",
-        "b": "9.35<58.3º A",
-        "c": "7.35<28.3º A",
-        "d": "7.35<58.3º A"
+        "a": " 2v",
+        "b": "4.5 v",
+        "c": "4 v",
+        "d": "3 v"
       },
       "explanations": {
         "a": "You have chosen wrong answer",
@@ -36,12 +36,12 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Find Thevenin’s equivalent circuit of the network.<br/><p style=\"text-align:center\"><img src=\"images/quiz3.JPG\" style=\"width:450px;height:330px;\"></p>",
+      "question": "Find the current flow change within the following AC circuit if a 3 ohms resistor is replaced through a 7ohms resistor with the compensation theorem and also prove this theorem.<br/><p style=\"text-align:center\"><img src=\"images/quiz3.png\" style=\"width:450px;height:330px;\"></p>",
       "answers": {
-        "a": " Vo.c.=(6.5 - sin wt ) V and Rin(Rth)= 20Ω",
-        "b": "Vo.c.=(6.5 - sin wt ) V and Rin(Rth)= 10Ω",
-        "c": "Vo.c.=(8.5 - sin wt ) V and Rin(Rth)= 15Ω",
-        "d": "Vo.c.=(6.5 - cos wt ) V and Rin(Rth)= 15Ω"
+        "a": " 2 A",
+        "b": "3 A",
+        "c": "4 A",
+        "d": "5 A"
       },
       "explanations": {
         "a": "You have chosen wrong answer",
@@ -53,12 +53,12 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Determine the current through the 5Ω resistor in the circuit.<br/><p style=\"text-align:center\"><img src=\"images/quiz4.JPG\" style=\"width:450px;height:330px;\"></p>",
+      "question": "In any linear network, the elements like inductor, resistor and capacitor always_________",
       "answers": {
-        "a": " 3A",
-        "b": "1A",
-        "c": "5A",
-        "d": "10A"
+        "a": " Exhibit changes due to change in temperature",
+        "b": "Remains constant irrespective of change in temperature, voltage and time",
+        "c": "Exhibit changes due to change in voltage",
+        "d": "Exhibit changes due to change in time"
       },
       "explanations": {
         "a": "You have chosen wrong answer",
@@ -70,12 +70,12 @@
       "difficulty": "beginner"
     },
     {
-      "question": "What is the current in the 10Ω resistor ?<br/><p style=\"text-align:center\"><img src=\"images/quiz5.JPG\" style=\"width:450px;height:330px;\"></p>",
+      "question": "The theorem that enables a number of voltage (or current) sources to be combined directly into a single voltage (or current) source is the........theorem",
       "answers": {
-        "a": "0.415A",
-        "b": "0.315A",
-        "c": "0.615A",
-        "d": "0.515Ae4"
+        "a": "Compensation",
+        "b": "Millman's",
+        "c": "Reciprocity",
+        "d": "Maxwell's"
       },
       "explanations": {
         "a": "You have chosen wrong answer",
