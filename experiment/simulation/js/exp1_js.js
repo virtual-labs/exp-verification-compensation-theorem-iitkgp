@@ -11,7 +11,7 @@ perform_meter1();
 	}
 	function changeImage1()
 {
- document.getElementById("img1").src = "./image/comp1.jpg";
+ document.getElementById("img1").src = "./images/comp1.jpg";
  document.getElementById('rl2').style.display = "none";
  document.getElementById('v1').style.display = "block";
  document.getElementById('V').style.display = "none";
@@ -43,7 +43,7 @@ document.getElementById('vth1').value=i1;
  document.getElementById('G').value=document.getElementById('r1').value;
  document.getElementById('H').value=document.getElementById('rl1').value;
  document.getElementById('I').value=document.getElementById('v1').value;
- document.getElementById("img1").src = "./image/comp2.jpg";
+ document.getElementById("img1").src = "./images/comp2.jpg";
  document.getElementById('rl2').style.display = "block";
  document.getElementById('v1').style.display = "block";
  document.getElementById('v1').setAttribute('readonly', 'readonly');
@@ -76,7 +76,7 @@ function changeImage3()
 {
  document.getElementById('r1').style.display = "block";
  document.getElementById('r1').setAttribute('readonly', 'readonly');
- document.getElementById("img1").src = "./image/comp3.jpg";
+ document.getElementById("img1").src = "./images/comp3.jpg";
  document.getElementById('rl2').style.display = "none";
  document.getElementById('v1').style.display = "none";
  document.getElementById('V').style.display = "block";
