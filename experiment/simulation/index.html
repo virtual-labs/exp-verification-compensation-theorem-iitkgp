@@ -1,13 +1,171 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
+<!--<a href="./thevenin_website.html" target="popup" onclick="window.open('./thevenin_website.html','name','width=1350,height=675')">Open page in new window</a>
+--><title>Verification of Compensation Theorem</title>
+<link rel="stylesheet" type="text/css" href="css/exp1_css.css">
+<script class="include" type="text/javascript" src="./jquery_files/jquery.min.js"></script>
+<script class="include" type="text/javascript" src="./jquery_files/jquery.jqplot.min.js"></script>
+<script type="text/javascript" src="./jquery_files/shCore.min.js"></script>
+<script type="text/javascript" src="./jquery_files/shBrushJScript.min.js"></script>
+<script type="text/javascript" src="./jquery_files/shBrushXml.min.js"></script>
+<script class="include" type="text/javascript" src="./jquery_files/jqplot.meterGaugeRenderer.min.js"></script>
 </head>
-<body>
-		<!-- Your code goes here-->
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<body background="./images/pg_bg.gif"> 
+<script src="js/exp1_js.js"></script>
+<div id="whole_body" style=" position:relative; margin-left:auto; margin-right:auto; top:0px; width:1160px;">
+<div style="font-size:40px; text-align:center; height:60px"> <b>Verification of Compensation Theorem</b></div>
+<div id="description" style="background-color:#99CCFF; border-radius:10px; border:2px solid #8AC007; position:absolute; top:75px; left:0px; width:500px">
+<div style="margin-left:15px; margin-right:5px">
+	<h3><u> Procedure:</u> </h3>
+	<h3> Experiment Part Select: </h3>
+	<b>Case 1:</b><br>
+	Set the voltage (say V<sub>1</sub>=100V), internal resistance (say R<sub>int</sub>=50ohm) and load resistance (R<sub>L</sub>). Simulate the circuit and observe the current I.<br>
+	<br><b>Case-2:</b>
+	<br>Change R<sub>L</sub> by  &#916; R<sub>L</sub>. &#916; R<sub>L</sub> can change  upto +/- 2% of R<sub>L</sub>. Simulate the circuit and observe the load current.<br>
+	<br><b>Case-3:</b> Simulate the circuit. Observe the varying current (difference between case 1 and case 2) in compensating circuit.<br>
+	<br> Now after one observation go to Case 1 again and change the values of R<sub>int</sub> and R<sub>L</sub> (through the up and down arrow keys in individual input boxes)and follow the above steps
+	for getting another observation.
+	
+	<br><br>N.B.:- All the resistances  are in ohms.<br> <br>
+</div>
+</div>
+
+<form name='f1'>
+<div id="main_circuit" style="position:relative;">
+	<img src="./images/comp1.jpg" id="img1" alt="Tutorials Point" style="position:absolute; top:14px;  right:-35px; width:600px; height:450px"/>
+	<div class="example-content" style="position:absolute; top:63px; right:103px;">
+	<link rel="stylesheet" type="text/css" href="./jquery_files/css_metergauge.css">
+	<div id="chart1" class="plot" style="background-color:transparent; width:185px; height:115px;"></div>
+	<script src="./jquery_files/js_metergauge1.js"></script>
+	</div>
+	<input type="number" name="r1" value="100" id="r1" style="position:absolute; top:80px;  right:338px; width:90px; ">
+	<input type="number" name="rl1" value="100" id="rl1" style="position:absolute; top:250px;  right:90px; width:90px; ">
+	<input type="number" name="rl2" value="0" id="rl2" style="position:absolute; top:330px;  right:90px; width:60px; display:none" onchange="checkValue();" onkeyup="checkValue();">
+	<input type="number" name="v1" value="200" id="v1" style="position:absolute; top:265px;  right:410px; width:50px;">
+	<input type="text" name="A" value="0" id="A" style="background-color:#E3DE84; text-align:center; position:absolute; top:150px;  right:145px; width:100px" readonly="readonly">
+	<input type="number" name="C" value="0" id="C" style="background-color:#E3DE84; text-align:center; position:absolute; top:130px;  right:160px; width:60px; display:none;" readonly="readonly">
+	<input type="text" name="V" value="0" id="V" style="background-color:#E3DE84; text-align:center; position:absolute; top:150px;  right:146px; width:100px; display:none;" readonly="readonly">
+	<input type="text" name="R" value="0" id="R" style="background-color:#E3DE84; text-align:center; position:absolute; top:246px;  right:108px; width:100px; display:none;" readonly="readonly">
+	<input type="text" name="F" value="0" id="F" style="background-color:#E3DE84; text-align:center; position:absolute; top:360px;  right:120px; width:100px; display:none;" readonly="readonly">
+	<input type="number" name="G" value="100" id="G" style="background-color:#E3DE84; text-align:center; position:absolute; top:70px;  right:310px; width:60px; display:none;" readonly="readonly">
+	<input type="number" name="H" value="100" id="H" style="background-color:#E3DE84; text-align:center; position:absolute; top:210px;  right:30px; width:60px; display:none;" readonly="readonly">
+	<input type="number" name="I" value="200" id="I" style="background-color:#E3DE84; text-align:center; position:absolute; top:230px;  right:320px; width:60px; display:none;" readonly="readonly">
+    <p style="text-align:center; font-size:21px; position:absolute; right:125px; top:12px">Ammeter<br>[range: 0-5Amp]</p>
+	<p style="text-align:center; font-size:20px; position:absolute; right:326px; height:10; width:10px; top:60px">&#x2126;</p>
+    <p style="text-align:center; font-size:21px; position:absolute; right:130px; top:128px">A</p>
+</div>
+
+<div style="position:absolute; top:88px; left:-50px">
+<ul class="tabs" style="position:absolute; top:350px; left:50px; width:585">
+        <li>
+          <input type="radio" checked name="tabs" id="tab1" onclick="changeImage1()">
+		  <label for="tab1" style="border: 2px solid #8AC007; border-radius: 10px;">Case 1</label>
+          <div id="tab-content1" class="tab-content animated fadeIn">
+			<u>Circuit analysis to determine <b>Current</b></u><br>
+			&nbsp To get the current<br> 
+			<input type="button" value="Simulate" onclick="p1()" style="cursor: pointer; background-color:#FE4080; text-align:center; font-size: 25px; position:absolute; top:5px; right:5px; width:150px; height:100px">
+			&nbsp Choose the values of voltage and resistance.<br> 
+			&nbsp And then click on Simulate.<br>
+			&nbsp <b>Current (I):</b>&nbsp &nbsp
+			<input type="text" name="A1" value="0" id="A1" style="background-color:#E3DE84; text-align:center;  width:120px" readonly="readonly">
+			<p style="text-align:center; position:absolute; right:300px; width:10px; top:110px">Amp</p>
+			<p style="text-align:center; font-size:20px; color:#000000; position:absolute; right:-500px; height:10; width:10px; top:-277px">&#x2126;</p>
+			<p style="text-align:center; color:#000000; position:absolute; right:-177px; width:10px; top:-262px">V</p>
+			<br>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="tabs" id="tab2" onclick="changeImage2()">
+		  <label for="tab2" style="border: 2px solid #8AC007; border-radius: 10px;">Case 2</label>
+          <div id="tab-content2" class="tab-content animated fadeIn">
+            <u>Circuit analysis to determine <b>Current</b></u><br>
+			&nbsp To get the current<br> 
+			<input type="button" value="Simulate" onclick="p2()" style="cursor: pointer; background-color:#FE4080; text-align:center; font-size: 25px; position:absolute; top:40px; right:20px; width:150px; height:100px">
+			&nbsp change the value of &#916;R<sub>L</sub>.<br> 
+			&nbsp And then click on Simulate.<br>
+			&nbsp <b>Total Current:</b>&nbsp &nbsp
+			<input type="text" name="vth1" value="0" id="vth1" style="background-color:#E3DE84; text-align:center; width:120px" readonly="readonly">
+		    <p style="text-align:center; position:absolute; right:-500px; color:#000000; height:10; width:10px; top:-198px">&#x2126;</p>
+			<p style="text-align:center; font-size:20px; color:#000000; position:absolute; right:-500px; height:10; width:10px; top:-277px">&#x2126;</p>
+			<p style="text-align:center; color:#000000; position:absolute; right:-177px; width:10px; top:-262px">V</p>
+			<p style="text-align:center; position:absolute; right:285px; width:10px; top:110px">Amp</p>
+			</div>
+        </li>
+        <li>
+          <input type="radio" name="tabs" id="tab3" onclick="changeImage3()">
+          <label for="tab3" style="border: 2px solid #8AC007; border-radius: 10px;">Case 3</label>
+          <div id="tab-content3" class="tab-content animated fadeIn">
+            <u>Circuit analysis to determine <b>Varying Current</b></u><br>
+			&nbsp To get the Varying Current in compensating circuit<br> 
+			<input type="button" value="Simulate" onclick="p3()" style="cursor: pointer; background-color:#FE4080; text-align:center; font-size: 25px; position:absolute; top:5px; right:5px; width:150px; height:100px">
+			&nbsp click on Simulate.<br> 
+			&nbsp Compensating Voltage : <input type="text" name="v22" value="0" id="v22" style="background-color:#E3DE84; text-align:center; width:80px" readonly="readonly"><br>
+			&nbsp Change_current(&#916;I) : <input type="text" name="A12" value="0" id="A12" style="background-color:#E3DE84; text-align:center; width:100px" readonly="readonly">
+			<br>
+			&nbsp R<sub>L</sub>+&#916;R<sub>L</sub>:&nbsp &nbsp
+			<input type="text" name="rth1" value="0" id="rth1" style="background-color:#E3DE84; text-align:center; width:120px" readonly="readonly">
+			<p style="position:absolute; color:#000000; right:-370px; width:10px; top:-225px">Compensating &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;voltage</p>
+			<p style="color:#000000; position:absolute; right:-468px; width:10px; top:-166px">V</p>
+			<p style="text-align:center; font-size:20px; color:#000000; position:absolute; right:-480px; height:10; width:10px; top:-282px">&#x2126;</p>
+			<p style="text-align:center; position:absolute; right:275px; width:10px; top:110px">Amp</p>
+			<p style="text-align:center; position:absolute; right:278px; width:10px; top:83px">V</p>
+			<p style="text-align:center; position:absolute; right:330px; width:10px; top:140px">&#x2126;</p>
+			</div>
+        </li>
+</ul><br>
+</div>
+
+<div id="observation" align="center" style="position:absolute; top:580px; left:600px;">
+		<h3 style="position:absolute; top:-50px; left:0px;"> <u>Observation Table: </u></h3>
+		<table cellspacing='0' style="font-size:12px; border: 2px solid black;"> <!-- cellspacing='0' is important, must stay -->
+			<tr><th>Serial no. of<br> Observation</th><th>Current(I) from <br>case 1</th><th>Total Current(I) from<br> case 2</th>
+			<th>Current_change<br>(&#916;I)</th><th>Total Resistance<br>(R<sub>L</sub>+&#916;R<sub>L</sub>)</th><th>Compensating voltage</th>
+			</tr><!-- Table Header -->
+			
+			<tr><td>1st</td>
+			<td><input type="text" name="tr1" value="" id="tr1" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr2" value="" id="tr2" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr3" value="" id="tr3" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr4" value="" id="tr4" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr5" value="" id="tr5" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			</tr><!-- Table Row -->
+			
+			<tr class='even'><td>2nd</td>
+			<td><input type="text" name="tr10" value="" id="tr10" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr20" value="" id="tr20" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr30" value="" id="tr30" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr40" value="" id="tr40" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr50" value="" id="tr50" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			</tr>
+			
+			<tr><td>3rd</td>
+			<td><input type="text" name="tr11" value="" id="tr11" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr21" value="" id="tr21" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr31" value="" id="tr31" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr41" value="" id="tr41" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr51" value="" id="tr51" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			</tr>
+			
+			<tr class='even'><td>4th</td>
+			<td><input type="text" name="tr12" value="" id="tr12" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr22" value="" id="tr22" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr32" value="" id="tr32" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr42" value="" id="tr42" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr52" value="" id="tr52" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			</tr>
+			
+			<tr><td>5th</td>
+			<td><input type="text" name="tr13" value="" id="tr13" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr23" value="" id="tr23" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr33" value="" id="tr33" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr43" value="" id="tr43" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			<td><input type="text" name="tr53" value="" id="tr53" style="background-color:transparent; text-align:center; text-color:#000000; border:none; width:80px" readonly="readonly"></td>
+			</tr>
+			</table>
+		<br><br>
+</div>
+</form>
+</div>
 </body>
 </html>
