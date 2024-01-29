@@ -21,11 +21,12 @@
 										
 $$\Delta I = I' - I$$
 <p style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp; 
-$$= \frac{V_o}{(R_{Th} + R_L + \Delta R_L} - \frac{V_o}{(R_{Th} + R_L}$$</p><br>
+$$= \frac{V_o}{(R_{Th} + R_L + \Delta R_L} - \frac{V_o}{(R_{Th} + R_L)}$$</p><br>
 <p style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;
 $$= \frac{V_o (-\Delta R_L)}{(R_{Th} + R_L)(R_{Th} + R_L + \Delta R_L)}$$</p><br>
 <p style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp; 
 $$= -\frac{V_c}{R_{Th} + R_L + \Delta R_L} .......(3)$$</p><br>
+
 $$V_c = I \Delta R_L$$
 									
 <p>This voltage V<sub>c</sub> is termed as compensating voltage.</p>
