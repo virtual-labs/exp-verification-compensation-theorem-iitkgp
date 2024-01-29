@@ -21,7 +21,7 @@
 										
 $$\Delta I = I' - I$$
 <p style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp; 
-$$= \frac{V_o}{(R_{Th} + R_L + \Delta R_L} - \frac{V_o}{(R_{Th} + R_L)}$$</p><br>
+$$= \frac{V_o}{(R_{Th} + R_L + \Delta R_L)} - \frac{V_o}{(R_{Th} + R_L)}$$</p><br>
 <p style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;
 $$= \frac{V_o (-\Delta R_L)}{(R_{Th} + R_L)(R_{Th} + R_L + \Delta R_L)}$$</p><br>
 <p style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp; 
