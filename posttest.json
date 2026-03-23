@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "For the following circuit Find the current flow throughout the AB branch once the resistance is 4Ω.<br/><p style=\"text-align:center\"><img src=\"images/quiz1.png\" style=\"width:450px;height:330px;\"></p>",
+      "answers": {
+        "a": "1.06 A",
+        "b": "2.8 A",
+        "c": "4 A",
+        "d": "None of these"
+      },
+      "explanations": {
+        "a": "You have chosen correct answer",
+        "b": "You have chosen wrong answer",
+        "c": "You have chosen wrong answer",
+        "d": "You have chosen wrong answer"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The resistance value in the two terminals of the following circuit A & B is modified to 5ohms then what is the compensation voltage?<br/><p style=\"text-align:center\"><img src=\"images/quiz2.png\" style=\"width:450px;height:330px;\"></p>",
+      "answers": {
+        "a": " 2v",
+        "b": "4.5 v",
+        "c": "4 v",
+        "d": "3 v"
+      },
+      "explanations": {
+        "a": "You have chosen wrong answer",
+        "b": "You have chosen wrong answer",
+        "c": "You have chosen correct answer",
+        "d": "You have chosen wrong answer"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Find the current flow change within the following AC circuit if a 3 ohms resistor is replaced through a 7ohms resistor with the compensation theorem and also prove this theorem.<br/><p style=\"text-align:center\"><img src=\"images/quiz3.png\" style=\"width:450px;height:330px;\"></p>",
+      "answers": {
+        "a": " 2 A",
+        "b": "3 A",
+        "c": "4 A",
+        "d": "5 A"
+      },
+      "explanations": {
+        "a": "You have chosen wrong answer",
+        "b": "You have chosen correct answer",
+        "c": "You have chosen wrong answer",
+        "d": "You have chosen wrong answer"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In any linear network, the elements like inductor, resistor and capacitor always_________",
+      "answers": {
+        "a": " Exhibit changes due to change in temperature",
+        "b": "Remains constant irrespective of change in temperature, voltage and time",
+        "c": "Exhibit changes due to change in voltage",
+        "d": "Exhibit changes due to change in time"
+      },
+      "explanations": {
+        "a": "You have chosen wrong answer",
+        "b": "You have chosen correct answer",
+        "c": "You have chosen wrong answer",
+        "d": "You have chosen wrong answer"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The theorem that enables a number of voltage (or current) sources to be combined directly into a single voltage (or current) source is the........theorem",
+      "answers": {
+        "a": "Compensation",
+        "b": "Millman's",
+        "c": "Reciprocity",
+        "d": "Maxwell's"
+      },
+      "explanations": {
+        "a": "You have chosen wrong answer",
+        "b": "You have chosen correct answer",
+        "c": "You have chosen wrong answer",
+        "d": "You have chosen wrong answer"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}

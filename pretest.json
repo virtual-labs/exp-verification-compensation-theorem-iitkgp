@@ -1,0 +1,39 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Three equal resistances are connected in star. If this star is converted into equivalent delta, the resistance of both the networks will be.......",
+      "answers": {
+        "a": "Equal",
+        "b": "Zero",
+        "c": "Vive-versa",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "You have chosen correct answer",
+        "b": "You have chosen wrong answer",
+        "c": "You have chosen wrong answer",
+        "d": "You have chosen wrong answer"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "For determining the polarity of a voltage drop across a resistor, it is necessary to know the ",
+      "answers": {
+        "a": "Value of resistor",
+        "b": "Value of current",
+        "c": "Direction of current flowing through the resistor",
+        "d": "Value of e.m.f. in the circuit"
+      },
+      "explanations": {
+        "a": "You have chosen wrong answer",
+        "b": "You have chosen wrong answer",
+        "c": "You have chosen correct answer",
+        "d": "You have chosen wrong answer"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+  ]
+}
